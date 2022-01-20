@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="NavigationViewDemo.demo.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NavigationViewDemo.demo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="0,-10,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="340*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="158,25,0,0" Text="Registration" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="88" FontSize="14" FontWeight="Normal" FontStyle="Normal" TextAlignment="Start"/>
+        <!--First Name-->
+
+        <TextBox x:Name="txtFname" Header="FirstName:" Margin="30,49,466,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="55"/>
+        <TextBlock x:Name="msgFnameErr" Foreground="Red" Text="" TextWrapping="Wrap" Width="204" Margin="227,77,249,760" FocusVisualPrimaryBrush="#FF231E1E"/>
+
+        <Grid RenderTransformOrigin="0.53,0.52" Margin="-20,10,18,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="115*"/>
+                <ColumnDefinition Width="116*"/>
+            </Grid.ColumnDefinitions>
+            <!--Last Name-->
+            <TextBox x:Name="txtLname" Header="LastName:" HorizontalAlignment="Left" Margin="50,97,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="55"/>
+            <TextBlock x:Name="msgLnameErr" Foreground="Red" HorizontalAlignment="Left" Margin="248,125,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+
+            <!--Password-->
+            <PasswordBox x:Name="txtPassword" Header="Password:" HorizontalAlignment="Left" Margin="50,152,0,0" VerticalAlignment="Top" Width="184" Height="55"/>
+            <TextBlock x:Name="msgPasswordErr" Foreground="Red" HorizontalAlignment="Left" Margin="248,180,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+
+            <!--Address-->
+            <TextBox x:Name="txtAddress" Header="Address:" HorizontalAlignment="Left" Margin="50,207,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="55"/>
+            <TextBlock x:Name="msgAddressErr" Foreground="Red" HorizontalAlignment="Left" Margin="248,235,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+
+            <!--Phone-->
+            <TextBox  x:Name="txtPhone" Header="Phone:" HorizontalAlignment="Left" Margin="50,262,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="55"/>
+            <TextBlock x:Name="msgPhoneErr" Foreground="Red" HorizontalAlignment="Left" Margin="248,290,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+
+            <!--Avatar-->
+            <TextBox x:Name="txtAvatar" Header="Avatar:" HorizontalAlignment="Left" Margin="50,317,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="55"/>
+            <TextBlock x:Name="msgAvatarErr" Foreground="Red" HorizontalAlignment="Left" Margin="248,345,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+
+            <!--Gender-->
+            <TextBlock HorizontalAlignment="Left" Margin="50,372,0,0" Text="Gender:" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="48"/>
+            <RadioButton x:Name="male"  Content="Male" Margin="50,397,0,0" VerticalAlignment="Top" Width="120" Height="32" Checked="HandleCheck" />
+            <RadioButton x:Name="female" Content="Female" Margin="142,397,0,0" VerticalAlignment="Top" Width="120" Height="32" Checked="HandleCheck"/>
+            <RadioButton x:Name="other" Content="Other" Margin="239,397,0,0" VerticalAlignment="Top" Width="120" Height="32" Grid.ColumnSpan="2" Checked="HandleCheck"/>
+            <TextBlock x:Name="msgGenderErr" Foreground="Red" HorizontalAlignment="Left" Margin="10,405,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Grid.Column="1"/>
+
+            <!--Email-->
+            <TextBox x:Name="txtEmail" Header="Email:" HorizontalAlignment="Left" Margin="50,429,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="55"/>
+            <TextBlock x:Name="msgEmailErr" Foreground="Red" HorizontalAlignment="Left" Margin="248,457,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+
+
+            <!--Birthday-->
+            <DatePicker x:Name="birthday" Header="Birthday:" Margin="50,493,323,0" VerticalAlignment="Top" Height="65" HorizontalAlignment="Stretch" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="msgBirthdayErr" Foreground="Red" HorizontalAlignment="Left" Margin="37,516,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" Grid.Column="1"/>
+
+
+
+            <!--Introduction-->
+            <TextBox x:Name="Introduction" Header="Introduction:" HorizontalAlignment="Left" Margin="50,563,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="55"/>
+            <TextBlock x:Name="msgIntroductionErr" Foreground="Red" HorizontalAlignment="Left" Margin="299,591,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="341" Grid.ColumnSpan="2"/>
+
+
+            <Button Content="Registration" Margin="73,645,0,0" VerticalAlignment="Top" Click="Registration_Click"/>
+            <Button Content="Reset" Margin="205,645,0,0" VerticalAlignment="Top" Width="85"/>
+
+        </Grid>
+
+    </Grid>
+</Page>

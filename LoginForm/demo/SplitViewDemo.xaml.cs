@@ -15,35 +15,24 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Hello_world.Client
+namespace LoginForm.demo
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class LoginPage : Page
+    public sealed partial class SplitViewDemo : Page
     {
-         
-        public LoginPage()
+        public SplitViewDemo()
         {
             this.InitializeComponent();
+            MainFrame.Navigate(typeof(demo.Page01));
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
+        private void SymbolIcon_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            //vailidate
-            var username = txtUserName.Text;
-            var password = txtPassWord.Password.ToString();
-            if (string.IsNullOrEmpty(username))
-            {
-                
-            }
+            split.IsPaneOpen = !split.IsPaneOpen;
 
-        }
-
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
             
-
         }
     }
 }
